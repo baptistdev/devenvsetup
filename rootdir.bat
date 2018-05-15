@@ -80,7 +80,6 @@ call git clone https://git.bbh.org.in/git/ember-masonry-grid
 
 echo "cloning finished.........."
 
-rem call git clone https://git.bbh.org.in/git/ember-searchable-select.git
 
 exit
 
