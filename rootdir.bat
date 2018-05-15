@@ -79,7 +79,6 @@ call git config --global http.sslVerify false
 call git clone https://git.bbh.org.in/git/ember-masonry-grid
 
 echo "cloning finished.........."
-
-
+echo "removed few lines"
 exit
 
