@@ -35,7 +35,7 @@ pause
 echo "Installing git.........."
 REM -- TODO --
 REM This is failing we are not able to download from git site.Ideally a git build solution or curl the url may workout
-start Git-2.13.1.2-64-bit.exe /VERYSILENT /MERGETASKS=!runcode
+start %CD:~0,3%/Git-2.13.1.2-64-bit.exe /VERYSILENT /MERGETASKS=!runcode
 
 echo "git installed.........."
 
