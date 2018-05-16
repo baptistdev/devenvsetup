@@ -34,7 +34,7 @@ echo "nodejs installed.........."
 echo "Installing git.........."
 REM -- TODO --
 REM This is failing we are not able to download from git site.Ideally a git build solution or curl the url may workout
-start %CD:~0,3%/Git-2.13.1.2-64-bit.exe /VERYSILENT /MERGETASKS=!runcode
+start %CD:~0,3%Git-2.13.1.2-64-bit.exe /VERYSILENT /MERGETASKS=!runcode
 
 echo "git installed.........."
 
@@ -71,12 +71,12 @@ echo "Installed bower.........."
 
 
 echo "Cloning ember-masonry-grid.........."
+pause 
 call git config --global http.sslVerify false
 
 
-call git clone https://git.bbh.org.in/git/ember-masonry-grid
+call git clone https://git.bbh.org.in/git/ember-masonry-grid %CD:~0,3%\Dev1\ember-masonry-grid
 
-call git clone https://git.bbh.org.in/git/ember-table
 
 echo "cloning finished.........."
 echo "removed few lines"
