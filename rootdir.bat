@@ -4,18 +4,18 @@ set mypath=%cd%
 @echo %mypath%
 
 
-MKDIR %CD:~0,3%\Dev\Downloads
+MKDIR %CD:~0,3%\Dev1\Downloads
 
 pause
-echo "%CD:~0,3%\Dev\Downloads Created.........."
+echo "%CD:~0,3%\Dev1\Downloads Created.........."
 
 
 pause
 echo "Installing VSCode.........."
 
-CALL powershell -Command "(New-Object Net.WebClient).DownloadFile('https://vscode-update.azurewebsites.net/latest/win32-x64/stable', '%CD:~0,3%\Dev\Downloads\VScodeSetup.exe')"
+CALL powershell -Command "(New-Object Net.WebClient).DownloadFile('https://vscode-update.azurewebsites.net/latest/win32-x64/stable', '%CD:~0,3%\Dev1\Downloads\VScodeSetup.exe')"
 	
-start %CD:~0,3%\Dev\Downloads\VSCodeSetup.exe /VERYSILENT /MERGETASKS=!runcode
+start %CD:~0,3%\Dev1\Downloads\VSCodeSetup.exe /VERYSILENT /MERGETASKS=!runcode
 
 echo "VSCode installed.........."
 
@@ -24,9 +24,9 @@ pause
 
 echo "Installing nodejs.........."
 
-CALL powershell -Command "(New-Object Net.WebClient).DownloadFile('https://nodejs.org/dist/v10.1.0/node-v10.1.0-x64.msi', '%CD:~0,3%\Dev\Downloads\nodejs.msi')"
+CALL powershell -Command "(New-Object Net.WebClient).DownloadFile('https://nodejs.org/dist/v10.1.0/node-v10.1.0-x64.msi', '%CD:~0,3%\Dev1\Downloads\nodejs.msi')"
 	
-MSIEXEC.exe /i %CD:~0,3%\Dev\Downloads\nodejs.msi ACCEPT=YES /quiet
+MSIEXEC.exe /i %CD:~0,3%\Dev1\Downloads\nodejs.msi ACCEPT=YES /quiet
 
 echo "nodejs installed.........."
 
@@ -45,7 +45,7 @@ rem CALL powershell -Command "(New-Object Net.WebClient).DownloadFile('https://g
 rem echo "git downloaded....."
 		  
 
-rem start %CD:~0,3%\Dev1\Downloads\git.exe /VERYSILENT /MERGETASKS=!runcode
+rem start %CD:~0,3%\Dev11\Downloads\git.exe /VERYSILENT /MERGETASKS=!runcode
 
 
 pause
