@@ -6,11 +6,11 @@ set mypath=%cd%
 
 MKDIR %CD:~0,3%\Dev1\Downloads
 
-pause
+
 echo "%CD:~0,3%\Dev1\Downloads Created.........."
 
 
-pause
+
 echo "Installing VSCode.........."
 
 CALL powershell -Command "(New-Object Net.WebClient).DownloadFile('https://vscode-update.azurewebsites.net/latest/win32-x64/stable', '%CD:~0,3%\Dev1\Downloads\VScodeSetup.exe')"
@@ -20,7 +20,6 @@ start %CD:~0,3%\Dev1\Downloads\VSCodeSetup.exe /VERYSILENT /MERGETASKS=!runcode
 echo "VSCode installed.........."
 
 
-pause
 
 echo "Installing nodejs.........."
 
@@ -31,7 +30,7 @@ MSIEXEC.exe /i %CD:~0,3%\Dev1\Downloads\nodejs.msi ACCEPT=YES /quiet
 echo "nodejs installed.........."
 
 
-pause
+
 echo "Installing git.........."
 REM -- TODO --
 REM This is failing we are not able to download from git site.Ideally a git build solution or curl the url may workout
@@ -48,14 +47,14 @@ rem echo "git downloaded....."
 rem start %CD:~0,3%\Dev11\Downloads\git.exe /VERYSILENT /MERGETASKS=!runcode
 
 
-pause
+
 echo "Installing npm.........."
 
 call npm install
 echo "Installed npm.........."
 
 
-pause
+
 echo "Installing ember.........."
 
 call npm install ember-cli -g
@@ -63,19 +62,21 @@ echo "Installed ember.........."
 
 
 
-pause
+
 echo "Installing bower.........."
 
 call npm install -g bower
 echo "Installed bower.........."
 
 
-pause
+
 echo "Cloning ember-masonry-grid.........."
 call git config --global http.sslVerify false
 
 
 call git clone https://git.bbh.org.in/git/ember-masonry-grid
+
+call git clone https://git.bbh.org.in/git/ember-table
 
 echo "cloning finished.........."
 echo "removed few lines"
