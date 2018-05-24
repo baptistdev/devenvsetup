@@ -21,7 +21,7 @@ pause
 
 echo "Installing git.........."
 REM -- TODO --
-REM This is failing we are not able to download from git site.Ideally a git build solution or curl the url may workout
+REM This is failing: we are not able to download from git site.Ideally a git build solution or curl the url may workout
 start %CD:~0,3%/Git-2.13.1.2-64-bit.exe /VERYSILENT /MERGETASKS=!runcode
 echo "git installed.........."
 
@@ -73,5 +73,61 @@ echo "Cloned ember-searchable-select........"
 pause
 echo "cloning finished.........."
 
+pause
+chdir %CD:~0,3%\Dev1\bbhverse
+echo "Installing npm.........."
+call npm install
+pause
+
+chdir %CD:~0,3%\Dev1\ember-masonry-grid
+echo "Installing npm.........."
+call npm install
+call npm install -g ember-cli
+pause
+
+chdir %CD:~0,3%\Dev1\loopback
+echo "Installing npm.........."
+call npm install
+pause
+
+chdir %CD:~0,3%\Dev1\ember-searchable-select
+echo "Installing npm.........."
+call npm cache clean --force
+call npm install
+call npm install
+pause
+
+chdir %CD:~0,3%\Dev1\qms
+echo "Geting latest version of npm.........."
+call npm i npm@latest -g
+pause
+echo "Removing package-lock.json"
+del package-lock.json
+pause
+echo "..........Installing npm..........."
+call npm install
+call npm install
+
+pause
+echo "..........Installing bower..........."
+call npm install -g bower
+pause
+echo "..........Installing bower dependencies..........."
+call bower install
+pause
+
+echo "Installing npm in dev\qms\server"
+chdir %CD:~0,3%\Dev1\qms\server
+call npm install
+pause
+chdir %CD:~0,3%\Dev1\qms
+
+echo " copying roboto"
+mkdir %CD:~0,3%\Dev1\qms\bower_components\materialize\dist\fonts\roboto
+xcopy %CD:~0,3%\roboto %CD:~0,3%\Dev1\qms\bower_components\materialize\dist\fonts\roboto
+pause
+echo " Starting server....."
+call ember s
+pause
 exit
 
