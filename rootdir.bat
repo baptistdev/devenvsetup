@@ -9,6 +9,24 @@ MKDIR %CD:~0,3%\Dev1\Downloads
 
 echo "%CD:~0,3%\Dev1\Downloads Created.........."
 
+echo " ******** .Net Frame Work **********"
+CALL powershell -Command "(New-Object Net.WebClient).DownloadFile('https://download.microsoft.com/download/E/4/1/E4173890-A24A-4936-9FC9-AF930FE3FA40/NDP461-KB3102436-x86-x64-AllOS-ENU.exe', '%CD:~0,3%\Dev1\Downloads\DNF.exe')"
+pause
+start %CD:~0,3%\Dev1\Downloads\DNF.exe ACCEPT=YES /VERYSILENT /MERGETASKS=!runcode 
+echo " ********Installed  .Net Frame Work **********"
+pause
+
+echo "*******Pyton**********}
+pause
+curl -O https://www.python.org/ftp/python/3.6.5/python-3.6.5-amd64.exe
+move %CD:~0,3%\python-3.6.5-amd64.exe %CD:~0,3%\Dev1\Downloads
+
+pause
+start %CD:~0,3%\Dev1\Downloads\python-3.6.5-amd64.exe  /VERYSILENT /MERGETASKS=!runcode
+echo "******** Installed Python ********"
+pause
+
+
 echo "Installing VSCode.........."
 
 CALL powershell -Command "(New-Object Net.WebClient).DownloadFile('https://vscode-update.azurewebsites.net/latest/win32-x64/stable', '%CD:~0,3%\Dev1\Downloads\VScodeSetup.exe')"
