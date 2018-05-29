@@ -9,11 +9,6 @@ MKDIR %CD:~0,3%\Dev1\Downloads
 
 echo "%CD:~0,3%\Dev1\Downloads Created.........."
 
-echo " ******** .Net Frame Work **********"
-CALL powershell -Command "(New-Object Net.WebClient).DownloadFile('https://download.microsoft.com/download/E/4/1/E4173890-A24A-4936-9FC9-AF930FE3FA40/NDP461-KB3102436-x86-x64-AllOS-ENU.exe', '%CD:~0,3%\Dev1\Downloads\DNF.exe')"
-pause
-start %CD:~0,3%\Dev1\Downloads\DNF.exe ACCEPT=YES /VERYSILENT /MERGETASKS=!runcode 
-echo " ********Installed  .Net Frame Work **********"
 pause
 
 echo "*******Pyton**********}

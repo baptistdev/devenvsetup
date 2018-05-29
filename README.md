@@ -13,14 +13,8 @@ Prerequisites
         ii.	 .Net Desktop build tools
         iii.Universal Window platform build tools
 
-4.	Instal Python 2.7 for Windows 7 64-bit and set Python to the class path
-Click https://www.python.org/ftp/python/2.7/python-2.7.amd64.msi to download
+4.Install CURL and set it to the system path
 
-5.	Install Git (Click https://github.com/git-for-windows/git/releases/download/v2.17.0.windows.1/Git-2.17.0-64-bit.exe to download)
-
-6.	Install node (Click https://nodejs.org/dist/v8.11.2/node-v8.11.2-win-x64.zip to download) 
- 
-7.	Install Vs Code (https://go.microsoft.com/fwlink/?Linkid=852157 to download)
 
 Steps to setup development environment
 
