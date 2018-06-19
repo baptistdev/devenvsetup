@@ -16,15 +16,15 @@ rem start %CD:~0,3%\Dev\Downloads\DNF.exe ACCEPT=YES /VERYSILENT /MERGETASKS=!ru
 rem echo " ********Installed  .Net Frame Work **********"
 rem pause
 
-echo "*******Pyton**********}
-pause
-curl -O https://www.python.org/ftp/python/3.6.5/python-3.6.5-amd64.exe
-move %CD:~0,3%\python-3.6.5-amd64.exe %CD:~0,3%\Dev\Downloads
+REM echo "*******Pyton**********}
+REM pause
+REM curl -O https://www.python.org/ftp/python/3.6.5/python-3.6.5-amd64.exe
+REM move %CD:~0,3%\python-3.6.5-amd64.exe %CD:~0,3%\Dev\Downloads
 
-pause
-start %CD:~0,3%\Dev\Downloads\python-3.6.5-amd64.exe  /VERYSILENT /MERGETASKS=!runcode
-echo "******** Installed Python ********"
-pause
+REM pause
+REM start %CD:~0,3%\Dev\Downloads\python-3.6.5-amd64.exe  /VERYSILENT /MERGETASKS=!runcode
+REM echo "******** Installed Python ********"
+REM pause
 
 
 echo "Installing VSCode.........."
